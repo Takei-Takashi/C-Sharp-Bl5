@@ -16,6 +16,5 @@ internal class Program
 		users.Select(x => x.Dob.Year).ToList().ForEach(x => Console.WriteLine(x));
 		Console.ReadLine();
 		users.Select(x => x.Dob.Year).Distinct().OrderByDescending(x => x).ToList().ForEach(x => Console.WriteLine(x));
-
 	}
 }
