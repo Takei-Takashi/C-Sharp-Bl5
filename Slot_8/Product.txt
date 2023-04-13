@@ -1,0 +1,3 @@
+Name = a; Category = a; Price = 3; Active = True
+Name = b; Category = a; Price = 2; Active = True
+Name = c; Category = d; Price = 5; Active = False

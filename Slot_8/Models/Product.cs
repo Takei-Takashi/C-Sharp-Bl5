@@ -20,5 +20,9 @@ namespace Slot_8.Models
 			this.Price = price;
 			this.IsActive = isActive;
 		}
+		public override string ToString()
+		{
+			return $"Name = {Name}; Category = {Category}; Price = {Price}; Active = {IsActive}";
+		}
 	}
 }
