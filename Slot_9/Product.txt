@@ -1,0 +1,7 @@
+﻿1; Silver Cross and Draculea Ep 01; Light novel; 98000; 15; true
+2; Silver Cross and Draculea Ep 02; Light novel; 100000; 12; true
+3; Silver Cross and Draculea Ep 03; Light novel; 120000; 13; true
+4; Silver Cross and Draculea Ep 04; Light novel; 110000; 11; false
+5; Date A Live Volume 1; Light novel; 150000; 20; true
+5; Date A Live Volume 2; Light novel; 140000; 12; true
+6; Date A Live Volume 3; Light novel; 145000; 14; true

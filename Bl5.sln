@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slot_5", "Slot_5\Slot_5.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slot_6", "Slot_6\Slot_6.csproj", "{C7A3A6BF-2FCA-4A65-BD18-672B7BAEEFB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slot_8", "Slot_8\Slot_8.csproj", "{64526AA2-03EA-4A3F-8773-A22105BBD9F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slot_8", "Slot_8\Slot_8.csproj", "{64526AA2-03EA-4A3F-8773-A22105BBD9F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slot_9", "Slot_9\Slot_9.csproj", "{8EC84DBF-1FB8-45D0-A850-D5E1EF6EB57C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{64526AA2-03EA-4A3F-8773-A22105BBD9F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64526AA2-03EA-4A3F-8773-A22105BBD9F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64526AA2-03EA-4A3F-8773-A22105BBD9F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EC84DBF-1FB8-45D0-A850-D5E1EF6EB57C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EC84DBF-1FB8-45D0-A850-D5E1EF6EB57C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EC84DBF-1FB8-45D0-A850-D5E1EF6EB57C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EC84DBF-1FB8-45D0-A850-D5E1EF6EB57C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

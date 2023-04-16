@@ -1,0 +1,8 @@
+1;Silver Cross and Draculea Ep 01;Light novel;98000;15;True
+2;Silver Cross and Draculea Ep 02;Light novel;100000;12;True
+3;Silver Cross and Draculea Ep 03;Light novel;120000;13;True
+4;Silver Cross and Draculea Ep 04;Light novel;110000;11;False
+5;Date A Live Volume 1;Light novel;150000;20;True
+5;Date A Live Volume 2;Light novel;140000;12;True
+6;Date A Live Volume 3;Light novel;145000;14;True
+7;a;a;1;2;True
