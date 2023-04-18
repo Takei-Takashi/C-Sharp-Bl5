@@ -56,17 +56,18 @@
 			comboBox1.Name = "comboBox1";
 			comboBox1.Size = new Size(252, 23);
 			comboBox1.TabIndex = 1;
+			comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
 			// 
 			// dateTimePicker1
 			// 
-			dateTimePicker1.Location = new Point(158, 80);
+			dateTimePicker1.Location = new Point(158, 82);
 			dateTimePicker1.Name = "dateTimePicker1";
 			dateTimePicker1.Size = new Size(200, 23);
 			dateTimePicker1.TabIndex = 2;
 			// 
 			// dateTimePicker2
 			// 
-			dateTimePicker2.Location = new Point(565, 80);
+			dateTimePicker2.Location = new Point(565, 82);
 			dateTimePicker2.Name = "dateTimePicker2";
 			dateTimePicker2.Size = new Size(200, 23);
 			dateTimePicker2.TabIndex = 3;
@@ -74,7 +75,7 @@
 			// label2
 			// 
 			label2.AutoSize = true;
-			label2.Location = new Point(61, 86);
+			label2.Location = new Point(51, 86);
 			label2.Name = "label2";
 			label2.Size = new Size(65, 15);
 			label2.TabIndex = 4;
@@ -94,6 +95,7 @@
 			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dataGridView1.Location = new Point(30, 131);
 			dataGridView1.Name = "dataGridView1";
+			dataGridView1.RowHeadersWidth = 51;
 			dataGridView1.RowTemplate.Height = 25;
 			dataGridView1.Size = new Size(735, 307);
 			dataGridView1.TabIndex = 6;
@@ -101,11 +103,12 @@
 			// checkBox1
 			// 
 			checkBox1.AutoSize = true;
-			checkBox1.Location = new Point(40, 87);
+			checkBox1.Location = new Point(30, 87);
 			checkBox1.Name = "checkBox1";
 			checkBox1.Size = new Size(15, 14);
 			checkBox1.TabIndex = 7;
 			checkBox1.UseVisualStyleBackColor = true;
+			checkBox1.CheckedChanged += checkBox1_CheckedChanged;
 			// 
 			// checkBox2
 			// 
@@ -115,6 +118,7 @@
 			checkBox2.Size = new Size(15, 14);
 			checkBox2.TabIndex = 8;
 			checkBox2.UseVisualStyleBackColor = true;
+			checkBox2.CheckedChanged += checkBox2_CheckedChanged;
 			// 
 			// Form1
 			// 
@@ -132,6 +136,7 @@
 			Controls.Add(label1);
 			Name = "Form1";
 			Text = "Form1";
+			Load += Form1_Load;
 			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
 			ResumeLayout(false);
 			PerformLayout();

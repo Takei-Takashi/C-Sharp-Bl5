@@ -1,5 +1,6 @@
 ﻿using Slot_12.Models;
 using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,13 +17,13 @@ namespace Slot_12.Dao
 			{
 				using (var context = new NorthwindContext())
 				{
-					list = context.Employees.ToList();
+					return context.Employees.ToList();
 				}
 			}
 			catch (Exception)
 			{
+				throw;
 			}
-			return list;
 		}
 	}
 }
