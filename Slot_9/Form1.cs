@@ -34,10 +34,19 @@ namespace Slot_9
 
 		private void button2_Click(object sender, EventArgs e)
 		{
+			
 			products = new List<Product>();
 			string FilePath = filePath;
+			
 			try
 			{
+				if (dataGridView1.DataSource != null)
+				{
+					// Clear danh sách sản phẩm và dữ liệu trên DataGridView
+					products.Clear();
+					dataGridView1.DataSource = null;
+					dataGridView1.Columns.Clear();
+				}
 				if (filePath == null)
 					throw new NullReferenceException();
 				string[] lines = File.ReadAllLines(FilePath);

@@ -56,7 +56,6 @@ namespace Slot_9
 
 				// Hiển thị kết quả tìm kiếm
 				textBox1.Text = maxId + 1 + "";
-				;
 			}
 			else
 			{
