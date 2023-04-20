@@ -25,5 +25,23 @@ namespace Slot_12.Dao
 				throw;
 			}
 		}
+
+		public Employee GetEmployeeByName(string name)
+		{
+			try
+			{
+				//List<String> s = name.Split(' ').ToList();
+				using (var context = new NorthwindContext())
+				{
+					var employee = context.Employees.FirstOrDefault(e => (e.LastName + " " + e.FirstName) == name );
+					return employee;
+				}
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
 	}
 }

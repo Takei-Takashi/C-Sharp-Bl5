@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slot_11", "Slot_11\Slot_11.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slot_12", "Slot_12\Slot_12.csproj", "{977C9475-6BDD-44DD-8474-05E22AC95470}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slot_16", "Slot_16\Slot_16.csproj", "{728F730F-3FC2-4C3C-B661-D9C2E92DE3B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slot_16", "Slot_16\Slot_16.csproj", "{728F730F-3FC2-4C3C-B661-D9C2E92DE3B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slot_19", "Slot_19\Slot_19.csproj", "{CAD4DC6D-C0FD-4140-8657-B168C83711BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{728F730F-3FC2-4C3C-B661-D9C2E92DE3B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{728F730F-3FC2-4C3C-B661-D9C2E92DE3B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{728F730F-3FC2-4C3C-B661-D9C2E92DE3B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAD4DC6D-C0FD-4140-8657-B168C83711BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAD4DC6D-C0FD-4140-8657-B168C83711BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAD4DC6D-C0FD-4140-8657-B168C83711BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAD4DC6D-C0FD-4140-8657-B168C83711BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -104,7 +104,46 @@ namespace Slot_12
 
 		private void button1_Click(object sender, EventArgs e)
 		{
+			string employeeName = comboBox1.Text;
+			string customerName = comboBox2.Text;
+			string shipperName = comboBox3.Text;
+			DateTime requiredDate = dateTimePicker1.Value;
+			List<Product> selectedProducts = new List<Product>();
+			foreach(DataGridViewRow row in dataGridView1.SelectedRows)
+			{
+				Product product = row.DataBoundItem as Product;
+				if(product != null)
+				{
+					selectedProducts.Add(product);
+				}
+			}
+			EmployeeDao employeeDao = new EmployeeDao();
+			CustomerDao customerDao = new CustomerDao();
+			ShipperDao shipperDao = new ShipperDao();
+			Employee employee = employeeDao.GetEmployeeByName(employeeName);
+			Customer customer = customerDao.GetCustomerByName(customerName);
+			Shipper shipper = shipperDao.GetShipperByName(shipperName);
 
+			Order order = new Order();
+			order.CustomerId = customer.CustomerId;
+			order.EmployeeId = employee.EmployeeId;
+			order.OrderDate = DateTime.Now;
+			order.RequiredDate = requiredDate;
+			order.ShipVia = shipper.ShipperId;
+			order.OrderDetails = new HashSet<OrderDetail>();
+
+			foreach (Product product in selectedProducts)
+			{
+				OrderDetail orderDetail = new OrderDetail();
+				orderDetail.ProductId = product.ProductId;
+				orderDetail.Quantity = 1; // Số lượng sản phẩm mặc định là 1
+				orderDetail.UnitPrice = product.UnitPrice ?? 0;
+				orderDetail.Discount = 0; // Giảm giá mặc định là 0
+				order.OrderDetails.Add(orderDetail);
+			}
+
+			OrderDao orderDao = new OrderDao();
+			orderDao.AddOrder(order);
 		}
 	}
 }

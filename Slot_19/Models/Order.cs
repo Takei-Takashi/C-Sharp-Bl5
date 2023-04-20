@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
 
-namespace Slot_12.Models
+namespace Slot_19.Models
 {
     public partial class Order
     {
@@ -11,8 +9,8 @@ namespace Slot_12.Models
         {
             OrderDetails = new HashSet<OrderDetail>();
         }
-		
-		public int OrderId { get; set; }
+
+        public int OrderId { get; set; }
         public string? CustomerId { get; set; }
         public int? EmployeeId { get; set; }
         public DateTime? OrderDate { get; set; }

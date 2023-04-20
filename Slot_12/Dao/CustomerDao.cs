@@ -24,5 +24,21 @@ namespace Slot_12.Dao
 				throw;
 			}
 		}
+		public Customer GetCustomerByName(string name)
+		{
+			try
+			{
+				using (var context = new NorthwindContext())
+				{
+					var customer = context.Customers.FirstOrDefault(c => c.CompanyName == name);
+					return customer;
+				}
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
 	}
 }

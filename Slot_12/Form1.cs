@@ -187,8 +187,10 @@ namespace Slot_12
 
 		private void button1_Click(object sender, EventArgs e)
 		{
+			this.Hide();
 			Add_new_Order add_New_Order = new Add_new_Order();
 			add_New_Order.ShowDialog();
+			this.Show();
 		}
 	}
 }

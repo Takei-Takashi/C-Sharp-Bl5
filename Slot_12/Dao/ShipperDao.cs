@@ -24,5 +24,21 @@ namespace Slot_12.Dao
 				throw;
 			}
 		}
+		public Shipper GetShipperByName(string name)
+		{
+			try
+			{
+				using (var context = new NorthwindContext())
+				{
+					var shipper = context.Shippers.FirstOrDefault(s => s.CompanyName == name);
+					return shipper;
+				}
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
 	}
 }
