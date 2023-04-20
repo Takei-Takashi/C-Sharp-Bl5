@@ -10,7 +10,13 @@ namespace Slot_12.Models
             Orders = new HashSet<Order>();
         }
 
-        public string CustomerId { get; set; } = null!;
+		public Customer(string v1, string v2)
+		{
+            this.CustomerId = v1;
+            this.CompanyName = v2;
+		}
+
+		public string CustomerId { get; set; } = null!;
         public string CompanyName { get; set; } = null!;
         public string? ContactName { get; set; }
         public string? ContactTitle { get; set; }

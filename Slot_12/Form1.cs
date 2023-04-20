@@ -27,24 +27,31 @@ namespace Slot_12
 			dataGridView1.AutoGenerateColumns = false;
 			dataGridView1.Columns.Add("oid", "Order ID");
 			dataGridView1.Columns["oid"].DataPropertyName = "OrderId";
+			dataGridView1.Columns["oid"].ReadOnly = true;
 
 			dataGridView1.Columns.Add("cid", "Customer ID");
 			dataGridView1.Columns["cid"].DataPropertyName = "CustomerId";
+			dataGridView1.Columns["cid"].ReadOnly = true;
 
 			dataGridView1.Columns.Add("orderDate", "Order Date");
 			dataGridView1.Columns["orderDate"].DataPropertyName = "OrderDate";
+			dataGridView1.Columns["orderDate"].ReadOnly = true;
 
 			dataGridView1.Columns.Add("requiredDate", "Required Date");
 			dataGridView1.Columns["requiredDate"].DataPropertyName = "RequiredDate";
+			dataGridView1.Columns["requiredDate"].ReadOnly = true;
 
 			dataGridView1.Columns.Add("ShippedDate", "Shipped Date");
 			dataGridView1.Columns["shippedDate"].DataPropertyName = "ShippedDate";
+			dataGridView1.Columns["shippedDate"].ReadOnly = true;
 
 			dataGridView1.Columns.Add("freight", "Freight");
 			dataGridView1.Columns["freight"].DataPropertyName = "Freight";
+			dataGridView1.Columns["freight"].ReadOnly = true;
 
 			dataGridView1.Columns.Add("shipAddress", "Ship Address");
 			dataGridView1.Columns["shipAddress"].DataPropertyName = "ShipAddress";
+			dataGridView1.Columns["shipAddress"].ReadOnly = true;
 		}
 
 		private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -176,6 +183,12 @@ namespace Slot_12
 
 			// Cập nhật DataGridView với dữ liệu mới
 			dataGridView1.DataSource = orders;
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			Add_new_Order add_New_Order = new Add_new_Order();
+			add_New_Order.ShowDialog();
 		}
 	}
 }
