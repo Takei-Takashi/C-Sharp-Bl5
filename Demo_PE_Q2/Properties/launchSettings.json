@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Demo_PE_Q2": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:65090;http://localhost:65091"
+    }
+  }
+}

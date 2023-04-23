@@ -144,6 +144,11 @@ namespace Slot_12
 
 			OrderDao orderDao = new OrderDao();
 			orderDao.AddOrder(order);
+			MessageBox.Show("Add order successfully!");
+
+			this.Close();
+			Form1 form1 = new Form1();
+			form1.ReloadData();
 		}
 	}
 }

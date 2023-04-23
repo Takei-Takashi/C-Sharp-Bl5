@@ -100,23 +100,27 @@ namespace Slot_12
 			List<Order> orders = orderDao.GetOrders(employee, fr, to);
 			dataGridView1.DataSource = orders;
 		}
-		private void ReloadData()
+		public void ReloadData()
 		{
 			Employee selectedEmployee = (Employee)comboBox1.SelectedItem;
-			int employee = selectedEmployee.EmployeeId;
-			DateTime? fr = null;
-			DateTime? to = null;
-			if (dateTimePicker1.Enabled == true)
+			if (selectedEmployee != null)
 			{
-				fr = dateTimePicker1.Value;
+				int employee = selectedEmployee.EmployeeId;
+				DateTime? fr = null;
+				DateTime? to = null;
+				if (dateTimePicker1.Enabled == true)
+				{
+					fr = dateTimePicker1.Value;
+				}
+				if (dateTimePicker2.Enabled == true)
+				{
+					to = dateTimePicker2.Value;
+				}
+				OrderDao orderDao = new OrderDao();
+				List<Order> orders = orderDao.GetOrders(employee, fr, to);
+				dataGridView1.DataSource = orders;
 			}
-			if (dateTimePicker2.Enabled == true)
-			{
-				to = dateTimePicker2.Value;
-			}
-			OrderDao orderDao = new OrderDao();
-			List<Order> orders = orderDao.GetOrders(employee, fr, to);
-			dataGridView1.DataSource = orders;
+
 		}
 
 		private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -187,10 +191,8 @@ namespace Slot_12
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			this.Hide();
 			Add_new_Order add_New_Order = new Add_new_Order();
 			add_New_Order.ShowDialog();
-			this.Show();
 		}
 	}
 }
