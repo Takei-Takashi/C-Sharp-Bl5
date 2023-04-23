@@ -5,3 +5,24 @@
     List<Employee> employees = ViewBag.Employees;
 }
 <h1>List Employee</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Sex</th>
+            <th scope="col">Position</th>
+            <th scope="col">Handle</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var e in employees)
+        {
+            <tr>
+                <th scope="row">@e.Name</th>
+                <td>@e.Sex</td>
+                <td>@e.Position</td>
+                <td><a asp-controller="Employee" asp-action="Delete" asp-route-id="@e.Id" style="text-decoration:none">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

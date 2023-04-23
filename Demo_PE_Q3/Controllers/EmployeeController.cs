@@ -16,5 +16,18 @@ namespace Demo_PE_Q3.Controllers
 			ViewBag.Employees = employees;
 			return View();
 		}
+		public IActionResult Delete(int id)
+		{
+			var context = new PE_Fall21B5Context();
+			Employee employee = context.Employees.Find(id);
+			if(employee == null)
+			{
+				return View("Not found");
+			}
+			context.Employees.Remove(employee);
+			context.SaveChanges();
+			ViewBag.Employee = context.Employees.ToList();
+			return RedirectToAction("List", "Employee");
+		}
 	}
 }
