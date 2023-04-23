@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    List<Book> books = ViewBag.Books;
+}
+<h1>List of Books:</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Year</th>
+            <th scope="col">Description</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var b in books)
+        {
+            <tr>
+                <th scope="row">@b.Id</th>
+                <td>@b.Title</td>
+                <td>@b.Year</td>
+                <td>@b.Description</td>
+                <td><a asp-controller="Book" asp-action="Delete" asp-route-id="@b.Id" style="text-decoration:none">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
