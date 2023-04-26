@@ -44,19 +44,9 @@ namespace PRN211_Demo1_Q2
                 listBox1.DisplayMember = "Name";
 
                 // Load the list of authors into listBox1
-                using (var context = new PRN211_Demo1Context())
+                foreach (Author author in selectedBook.Authors)
                 {
-                    selectedBook = context.Books
-                        .Include(b => b.Authors)
-                        .SingleOrDefault(b => b.Id == selectedBook.Id);
-
-                    if (selectedBook != null)
-                    {
-                        foreach (Author author in selectedBook.Authors)
-                        {
-                            listBox1.Items.Add(author.Name);
-                        }
-                    }
+                    listBox1.Items.Add(author.Name);
                 }
             }
         }
@@ -69,39 +59,52 @@ namespace PRN211_Demo1_Q2
             if (selectedBook != null)
             {
                 // Get the selected author from listBox1
-                string selectedAuthor = listBox1.SelectedItem as string;
+                string selectedAuthorName = listBox1.SelectedItem as string;
 
-                if (selectedAuthor != null)
+                if (selectedAuthorName != null)
                 {
-                    // Show a confirmation dialog
-                    DialogResult result = MessageBox.Show("Do you really want to remove this author ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    // Find the selected author in the book's Authors collection
+                    Author selectedAuthor = selectedBook.Authors.FirstOrDefault(a => a.Name == selectedAuthorName);
 
-                    if (result == DialogResult.Yes)
+                    if (selectedAuthor != null)
                     {
-                        // Find the author in the list of authors for the book
-                        Author authorToRemove = selectedBook.Authors.SingleOrDefault(a => a.Name == selectedAuthor);
+                        // Show a confirmation dialog
+                        DialogResult result = MessageBox.Show("Do you really want to remove this author ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                        if (authorToRemove != null)
+                        if (result == DialogResult.Yes)
                         {
-                            // Remove the author from the list of authors for the book
-                            selectedBook.Authors.Remove(authorToRemove);
+                            // Remove the selected author from the book's Authors collection
+                            selectedBook.Authors.Remove(selectedAuthor);
 
-                            using (var dbContext = new PRN211_Demo1Context())
+                            // Save changes to the database
+                            using (var context = new PRN211_Demo1Context())
                             {
-                                // Save the changes to the database
-                                dbContext.Update(selectedBook);
-                                dbContext.SaveChanges();
+                                context.Entry(selectedBook).State = EntityState.Modified;
+                                context.SaveChanges();
                             }
 
-                            // Refresh the list of authors in listBox1
+                            // Clear the items in the listBox1
                             listBox1.Items.Clear();
+                            // Load the list of authors into listBox1
                             foreach (Author author in selectedBook.Authors)
                             {
                                 listBox1.Items.Add(author.Name);
                             }
                         }
                     }
+                    else
+                    {
+                        MessageBox.Show("Selected author not found.");
+                    }
                 }
+                else
+                {
+                    MessageBox.Show("Please select an author.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a book.");
             }
         }
     }

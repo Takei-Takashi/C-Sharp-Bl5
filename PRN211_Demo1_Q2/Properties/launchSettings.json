@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "PRN211_Demo1_Q2": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:51126;http://localhost:51127"
+    }
+  }
+}

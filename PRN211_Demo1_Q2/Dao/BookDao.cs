@@ -1,4 +1,5 @@
-﻿using PRN211_Demo1_Q2.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using PRN211_Demo1_Q2.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace PRN211_Demo1_Q2.Dao
             {
                 using (var context = new PRN211_Demo1Context())
                 {
-                    return context.Books.ToList();
+                    return context.Books.Include(b => b.Authors).ToList();
                 }
             }
             catch (Exception)

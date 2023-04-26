@@ -33,7 +33,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PRN211_Demo1_Q1", "PRN211_D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PRN211_Demo1_Q2", "PRN211_Demo1_Q2\PRN211_Demo1_Q2.csproj", "{99378583-1207-48A2-86DD-9541CAD48F6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRN211_Demo1_Q3", "PRN211_Demo1_Q3\PRN211_Demo1_Q3.csproj", "{A523ECDF-10CC-45C9-8419-4884297FACBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PRN211_Demo1_Q3", "PRN211_Demo1_Q3\PRN211_Demo1_Q3.csproj", "{A523ECDF-10CC-45C9-8419-4884297FACBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gaming_Center", "Gaming_Center\Gaming_Center.csproj", "{3FD51D01-1110-4333-B1ED-623EA7D94DD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{A523ECDF-10CC-45C9-8419-4884297FACBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A523ECDF-10CC-45C9-8419-4884297FACBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A523ECDF-10CC-45C9-8419-4884297FACBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FD51D01-1110-4333-B1ED-623EA7D94DD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FD51D01-1110-4333-B1ED-623EA7D94DD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FD51D01-1110-4333-B1ED-623EA7D94DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FD51D01-1110-4333-B1ED-623EA7D94DD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
